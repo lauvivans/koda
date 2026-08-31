@@ -1,0 +1,123 @@
+import PartsOfSpeech from "../assets/blog/parts-of-speech.png";
+import PlayIcon from "../components/icons/Play.vue";
+
+Quando eu era mais nova, eu tinha uma forte inclinação a escrita (em determinado momento pensei que a minha profissão seria voltada para algo relacionado).
+
+Com o passar do tempo, outras coisas foram tomando caminho e fui desenvolvendo menos essas habilidades, que, no entanto, deram espaço para uma escrita mais técnica, principalmente com a minha entrada no curso superior.
+
+O momento em que mais enxerguei isso voltado à engenharia foi quando me aventurei a escrever um Technical Design Document (TDD) durante o meu TCC, e senti na pele como estruturar bem um documento técnico muda completamente o processo.
+
+Nos últimos anos, com a proliferação do uso de LLMs, somada à minha entrada em um cargo de liderança, percebi o quanto a escrita e a comunicação são habilidades incrivelmente úteis no dia a dia técnico.
+
+Constantemente precisamos utilizar nossa linguagem para traduzir problemas em diferentes contextos. A forma como você se comunica com o seu PO e precisa guiar uma tomada de decisão é diferente da forma como você se comunica com um colega do mesmo time, o que acaba sendo diferente da forma como você se comunica com uma LLM.
+
+Quando aprendemos a comunicar as coisas e a usar a escrita a nosso favor, temos uma maior chance de conseguirmos aquilo que queremos.
+
+> A Google reuniu uma coleção de cursos e recursos para ajudar a melhorar habilidades na escrita de documentações técnicas[^1]. Inclusive, existe um cargo somente para esse ofício: **Technical Writing**.
+
+De qualquer forma, você não precisa ser um Technical Writer para entender a importância que isso tem no seu dia a dia (vai te acompanhar sempre).
+
+--
+
+## As palavras
+
+<figure>
+  <label>
+    Figura 1 - Tabela de componentes do discurso. Fonte: tabela retirada do
+    curso Technical Writing da Google
+  </label>
+  <img
+    src={PartsOfSpeech}
+    alt="Tabela de componentes do discurso, como: substantivos, pronomes, adjetivos, etc."
+  />
+  <figcaption>
+    Fonte: tabela retirada do curso Technical Writing da Google
+  </figcaption>
+</figure>
+
+Seja no inglês ou no português, há diversos componentes que fazem parte de um discurso. É importante que saibamos usar esses componentes com sabedoria.
+
+Quando estamos escrevendo documentos técnicos, algumas dicas são:
+
+- Evite utilizar voz passiva;
+- Priorize sentenças curtas e claras;
+- Utilize listas numeradas ou não-numeradas conforme contexto;
+- Cada parágrafo em um texto deve representar uma lógica isolada, ou seja, um tópico de cada vez. Não crie parágrafos tão curtos ou tão longos;
+- Entenda quem é a sua audiência.
+
+Várias empresas além da Google, como a Microsoft, têm seu próprio guideline de estilo para escrita de documentos técnicos. [Google Style Guide - Developers](https://developers.google.com/style)
+
+## Acessibilidade
+
+A acessibilidade é um dos temas cruciais quando falamos de incluir uma gama maior de pessoas na audiência.
+
+Pontos importantes a considerar:
+
+- Quando estiver fazendo uso apenas de um recurso visual, lembre-se de introduzir um texto alternativo;
+- Verifique contraste. Um dos exemplos mais comuns são textos que utilizam um fundo mais escuro do que a própria cor do texto, tornando-o inacessível, muitas vezes até para pessoas que não possuem algum tipo de deficiência visual;
+- Escolha linguagem inclusiva.
+
+## Mensagens de Erro
+
+Um ponto interessante abordado pelo Google for Developers é sobre mensagens de erro, que podem ser uma dor de cabeça, ainda mais quando não tratadas corretamente.
+
+Ao escrever mensagens de erro devemos levar em consideração:
+
+- Informe o exato problema, não seja vago;
+- Ajude quem está recebendo o erro a entender quais são os requisitos e constraints;
+- Explique como resolver o problema (inclua ação);
+- Inclua exemplos em conjunto com as explicações;
+- Uma mensagem de erro não precisa ser longa, remova texto desnecessário;
+- Evite mensagens com dupla-negativa;
+- Lembre-se de quem é a sua audiência;
+- Utilize formatação;
+- Cuidado com o tom utilizado na escrita.
+
+Essas técnicas são muito utilizadas por equipes de design, principalmente quando se trata de UX.
+
+> E quando você tem um bug em que a mensagem de validação nem foi mapeada no handoff/userflow, e cabe a você escrevê-la do zero?
+
+As habilidades de escrita da pessoa engenheira vêm em bom momento.
+
+Certa vez, revisando um PR que precisava corrigir o comportamento de uma validação que não existia para o usuário, a correção utilizava a mensagem que vinha do back-end: _Uma nova senha não pode ser igual à atual_.
+
+Na revisão, sugeri outras alternativas:
+
+- A nova senha precisa ser diferente da atual
+- A nova senha não pode ser igual à senha atual. Tente outra
+
+Pequenos detalhes na escrita fazem toda diferença, ainda mais se queremos evitar ambiguidades.
+
+--
+
+Seja em documentos técnicos, acessibilidade ou mensagens de erro para devs e usuários, nutrir a escrita (e a leitura que a sustenta) é uma habilidade que vale a pena treinar continuamente.
+
+<a
+  href="https://www.youtube.com/watch?v=hKKeqDERssg"
+  style="display: block; position: relative; margin: 2rem 0;"
+>
+  <img
+    src="https://img.youtube.com/vi/hKKeqDERssg/maxresdefault.jpg"
+    alt="Every Engineer is also a Writer"
+    style="width: 100%; height: auto; border-radius: 8px; cursor: pointer;"
+  />
+  <div
+    style={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: "80px",
+      height: "80px",
+      backgroundColor: "rgba(255, 0, 0, 0.7)",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <PlayIcon/>
+  </div>
+</a>
+
+Referência: [1] Google for Developers. Technical Writing Courses: Overview. Disponível em: https://developers.google.com/tech-writing/overview

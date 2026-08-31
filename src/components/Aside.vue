@@ -25,9 +25,8 @@ const props = defineProps<{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: var(--code-bg);
-  padding: 30px 20px;
+  padding: 1em 4em 1em 1em;
   height: fit-content;
-  flex: 1;
   position: absolute;
   z-index: 100;
 

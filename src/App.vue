@@ -3,9 +3,11 @@ import { ref } from "vue";
 import data from "./data.ts";
 import Modal from "./components/Modal.vue";
 import Header from "./components/Header.vue";
+import ArrowLeft from "./components/icons/ArrowLeft.vue";
 
 const search = ref("");
 const isModalOpen = ref(false);
+const isYoutubeOpen = ref(false);
 const searchResults = ref<
   Array<{
     section: string;
@@ -47,12 +49,31 @@ const handleSearch = (event: SubmitEvent) => {
     }
   }
 };
+
+const handleYoutubeOpen = () => {
+  isYoutubeOpen.value = !isYoutubeOpen.value;
+};
 </script>
 
 <template>
   <Header :handleSearch="handleSearch" />
   <main class="koda-app">
     <RouterView />
+
+    <button class="koda-app__helper" @click="handleYoutubeOpen">
+      <ArrowLeft />
+    </button>
+
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?list=PLGa5r4TzH_OZoTsFrse-EQ0mZZAC8nlmr"
+      frameborder="10"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      :style="{
+        visibility: isYoutubeOpen ? `visible` : `hidden`,
+        width: isYoutubeOpen ? 'auto' : '0%',
+      }"
+    />
 
     <Modal :handleModalOpen="handleModalOpen" :isModalOpen="isModalOpen">
       <div v-if="searchResults.length > 0" class="search-results">
@@ -77,6 +98,41 @@ const handleSearch = (event: SubmitEvent) => {
   height: calc(100% - var(--header-height));
   display: flex;
   width: 100%;
+  position: relative;
+}
+
+.koda-app__helper {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--code-bg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: width 0.5s ease-in;
+  width: 2%;
+}
+
+.koda-app__helper:hover {
+  width: 5%;
+}
+
+.koda-app__helper svg {
+  width: 3em;
+  height: 3em;
+}
+
+.koda-app__helper svg path {
+  fill: var(--text);
+}
+
+.koda-app > iframe {
+  position: absolute;
+  height: 200px;
+  right: 0;
+  top: 20%;
 }
 
 .search-results {

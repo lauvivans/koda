@@ -1,153 +1,102 @@
-<script setup lang="ts">
-import { ref } from "vue";
-import data from "../data";
-import Aside from "../components/Aside.vue";
-import Card from "../components/Card.vue";
-
-const category = ref("books");
-
-const selectMenuItem = (item: string) => {
-  category.value = item;
-};
-</script>
-
 <template>
-  <div class="p-homepage">
-    <Aside :selectMenuItem="selectMenuItem" :selectedCategory="category" />
-    <div class="p-homepage__content">
-      <div class="p-homepage__content__img-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/videoseries?list=PLGa5r4TzH_OZoTsFrse-EQ0mZZAC8nlmr"
-          frameborder="10"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-        />
-        <img src="../assets/undraw_summer_u79u.svg" />
+  <div class="p-home">
+    <div class="p-home__aside">
+      <div class="p-home__img-wrapper">
+        <img loading="lazy" src="../assets/undraw_a-woman-avatar_ifsl.svg" />
       </div>
-      <div class="p-homepage__links">
-        <div
-          class="p-homepage__links__subcategories"
-          v-for="(categoryItems, key) in data[category]"
-          :key="key"
-        >
-          <div class="p-homepage__links__subcategories__subcategory">
-            <h2>{{ key }}</h2>
-            <div>
-              <Card
-                v-for="categoryItem in categoryItems"
-                :title="categoryItem.title"
-                :href="categoryItem.link"
-                :category="category"
-                :desc="categoryItem.desc"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ul>
+        <li><a>@lauvivans</a></li>
+      </ul>
+    </div>
+    <div class="p-home__presentation">
+      <p>Hi, I’m Laura.</p>
+      <p>
+        I'm a passionate Web Developer with a strong foundation in Front-End
+        development and a growing interest in becoming a well-rounded Full Stack
+        Web Developer. I hold a degree in Information Systems from the Instituto
+        Federal de Santa Catarina (IFSC), where I had the opportunity to work on
+        projects that combined technology with real-world challenges. One of
+        these experiences was a university extension project focused on
+        developing a web application with Django to automate the triage process
+        in health centers and hospitals.
+      </p>
+      <p>
+        Throughout my journey, I've also worked on projects with a strong focus
+        on accessibility and social impact. I developed AcessiWeb, a web system
+        designed to make WCAG accessibility guidelines easier to understand
+        while implementing some of these practices directly into the application
+        to improve the experience for users with different accessibility needs.
+        Later, I joined Lacrei Saúde, a social-impact health tech that connects
+        the LGBTQIAPN+ community with inclusive and qualified healthcare
+        professionals, where I grew as a developer and eventually took on the
+        role of Front-End Tech Lead.
+      </p>
+      <p>
+        My professional experience also includes working as a contractor on a
+        payment management system that helps companies manage partners,
+        services, and charges while processing payments to multiple partners
+        through a single transaction. The system integrates with a payment API
+        and gave me valuable experience building solutions around real business
+        needs. I also contributed to Estudos Arquivados, a project that uses the
+        arquivo.pt API to help Portuguese students find relevant academic
+        content based on their school year and subjects. The project also
+        leverages OpenAI's LLM to identify related words and expressions from
+        user input, improving the accuracy of the search filters.
+      </p>
+      <p>
+        Outside of professional projects, I enjoy experimenting and learning
+        through side projects such as Notion-portfolio, Yoko!, and Koda. These
+        projects allow me to explore new ideas, technologies, and approaches
+        while continuing to grow as a developer. Overall, I'm driven by
+        curiosity and a desire to build useful, accessible, and well-crafted web
+        experiences—and I'm excited to keep expanding my skills toward becoming
+        a great Full Stack Web Developer.
+      </p>
     </div>
   </div>
 </template>
 
 <style lang="css">
-.p-homepage {
+.p-home {
   display: flex;
-  height: 100%;
-  width: 100%;
+  column-gap: 1em;
+  padding: 1em;
 
   @media (max-width: 480px) {
     flex-direction: column;
   }
 }
 
-.p-homepage__content {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    row-gap: 20px;
-  }
-}
-
-.p-homepage__content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(../assets/undraw_nature_yf30.svg);
-  background-size: cover;
-  background-position: start;
-  background-repeat: no-repeat;
-  opacity: 0.1;
-  z-index: -1;
-}
-
-.p-homepage__content__img-wrapper {
-  width: 40%;
-  display: flex;
-  position: relative;
-
-  @media (max-width: 480px) {
-    width: 100%;
-  }
-}
-
-.p-homepage__content__img-wrapper iframe {
-  position: absolute;
-  right: 0;
-  border-radius: 10px;
-  width: 40%;
-}
-
-.p-homepage__content__img-wrapper img {
-  width: 100%;
-  object-fit: fill;
-  z-index: 200;
-  align-self: end;
-}
-
-.p-homepage__links {
+.p-home__aside {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
-  height: 100%;
-  width: 60%;
-  max-height: 100%;
-  overflow-y: auto;
-  padding: 0px 20px;
-
-  @media (max-width: 480px) {
-    width: 100%;
-    padding: 0px 10px;
-    max-height: inherit;
-  }
+  align-items: center;
+  row-gap: 1em;
+  flex: 1;
 }
 
-.p-homepage__links__subcategories__subcategory {
+.p-home__aside ul {
+  list-style: none;
+}
+
+.p-home__aside ul li {
+  font-weight: 700;
+}
+
+.p-home__img-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.p-home__presentation {
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
-  width: 100%;
-  background-color: var(--code-bg);
-  padding: 20px 20px 30px;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
+  row-gap: 1em;
+  flex: 4;
 }
 
-.p-homepage__links__subcategories__subcategory h2 {
-  font-size: 1.5rem;
-}
-
-.p-homepage__links__subcategories__subcategory > div {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-.p-homepage__links__subcategories:last-of-type {
-  padding-bottom: 50px;
+.p-home__presentation > p {
+  line-height: 1.5;
 }
 </style>

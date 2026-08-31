@@ -5,11 +5,7 @@
     </div>
 
     <div class="p-about__info">
-      <p>Hi, I’m Laura.</p>
-      <p>
-        Welcome to my library of references in Web Development, Tech World and
-        some other cool stuff
-      </p>
+      <p>Koda reunites my blog posts and links I&apos;ve gathered over time (some related to the tech world, but also unrelated things I find cool)</p>
     </div>
   </div>
 </template>

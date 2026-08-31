@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdx-js/rollup": "^3.1.1",
+    "@vitejs/plugin-vue-jsx": "^5.1.6",
     "@vueuse/core": "^14.4.0",
     "vue": "^3.5.40",
     "vue-router": "^5.2.0"

@@ -30,14 +30,22 @@ const switchTheme = () => {
 
 <template>
   <header class="c-header">
-    <div>
+    <nav>
       <div class="c-header__logo">
         <RouterLink to="/" class="c-header__logo__logo">
           <img src="/favicon.svg" />
           <span>Koda</span>
         </RouterLink>
       </div>
-      <RouterLink to="/about" class="c-header__about"> About </RouterLink>
+      <ul class="c-header__links">
+        <RouterLink to="/about" class="c-header__links__link">
+          About
+        </RouterLink>
+        <RouterLink to="/blog" class="c-header__links__link"> Blog </RouterLink>
+        <RouterLink to="/links" class="c-header__links__link">
+          Links
+        </RouterLink>
+      </ul>
       <button class="c-header__search-btn" @click="handleShowForm">
         <Search />
       </button>
@@ -53,7 +61,7 @@ const switchTheme = () => {
         ><Github v-if="theme === 'light'" />
         <GitubLight v-else />
       </a>
-    </div>
+    </nav>
     <form
       class="c-header__search-form"
       method="get"
@@ -76,17 +84,23 @@ const switchTheme = () => {
   justify-content: space-between;
 }
 
-.c-header > div {
+.c-header > nav {
   display: flex;
   column-gap: 20px;
   align-items: center;
   width: 100%;
 }
 
-.c-header__about {
+.c-header__links {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1.5em;
+  margin: 0 auto;
+}
+
+.c-header__links__link {
   all: unset;
   cursor: pointer;
-  margin: 0 auto;
 }
 
 .c-header__github {
