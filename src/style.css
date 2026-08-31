@@ -99,6 +99,11 @@ body {
   }
 }
 
+::selection,
+::-moz-selection {
+  background-color: var(--accent-bg);
+}
+
 #app {
   display: flex;
   flex-direction: column;
