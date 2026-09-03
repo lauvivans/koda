@@ -14,7 +14,7 @@ import posts from "../posts";
       >
     </div>
     <div class="p-blog__img-wrapper">
-      <img src="../assets/undraw_playful-cat_3ta5.svg" />
+      <img src="../assets/undraw_cat_lqdj.svg" />
     </div>
   </div>
 </template>
