@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import data from "./data.ts";
+import links from "@/data/links.json";
 import Modal from "./components/Modal.vue";
 import Header from "./components/Header.vue";
 import ArrowLeft from "./components/icons/ArrowLeft.vue";
+
+const data: Links = links;
 
 const search = ref("");
 const isModalOpen = ref(false);

@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import data from "../data";
-import Card from "../components/Card.vue";
+import links from "@/data/links.json";
+import Card from "@/components/Card.vue";
+
+const data: Links = links;
 
 const category = ref("books");
 const selectedLink = ref<{
