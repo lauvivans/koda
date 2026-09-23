@@ -877,10 +877,12 @@
         "link": "https://www.shopify.com/ca/editions/summer2025/drive"
       }
     ],
-    "tech": {
-      "title": "Mulheres na tecnologia",
-      "link": "https://mulheresnatecnologia.com.br/"
-    }
+    "tech": [
+      {
+        "title": "Mulheres na tecnologia",
+        "link": "https://mulheresnatecnologia.com.br/"
+      }
+    ]
   },
   "exercises": {
     "challenges": [
