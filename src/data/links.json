@@ -17,6 +17,10 @@
       {
         "title": "Redes de Computadores para quem está começando: entenda a jornada por trás de cada clique",
         "link": "https://a.co/d/0fD9GkmJ"
+      },
+      {
+        "title": "Atomic Design",
+        "link": "https://atomicdesign.bradfrost.com/"
       }
     ],
     "design": [
@@ -95,6 +99,10 @@
       {
         "title": "JavaScript reference",
         "link": "https://devdocs.io/javascript/"
+      },
+      {
+        "title": "GPT5 prompting guide",
+        "link": "https://developers.openai.com/cookbook/examples/gpt-5/gpt-5_prompting_guide"
       }
     ],
     "acessibility": [
@@ -162,6 +170,10 @@
       {
         "title": "Aria Diniz",
         "link": "https://ariasdiniz.github.io/ariablog/"
+      },
+      {
+        "title": "Julia Evans",
+        "link": "https://jvns.ca/"
       }
     ]
   },
@@ -255,6 +267,26 @@
       {
         "title": "MIT Technology Review",
         "link": "https://mittechreview.com.br/"
+      },
+      {
+        "title": "The Wrong Abstraction",
+        "link": "https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction"
+      },
+      {
+        "title": "Writing code was never the bottleneck",
+        "link": "https://ordep.dev/posts/writing-code-was-never-the-bottleneck"
+      },
+      {
+        "title": "Agentic design patterns: aprendendo a construir agentes efetivos",
+        "link": "https://jpmartins.substack.com/p/agentic-design-patterns-aprendendo?r=240oyr&utm_campaign=post&utm_medium=web&triedRedirect=true"
+      },
+      {
+        "title": "Tailwind and the death of craftsmanship",
+        "link": "https://pdx.su/blog/2023-07-26-tailwind-and-the-death-of-craftsmanship/"
+      },
+      {
+        "title": "Get your work recognized: write a brag document",
+        "link": "https://jvns.ca/blog/brag-documents/"
       }
     ],
     "learning": [
@@ -299,6 +331,10 @@
       {
         "title": "speakerdeck/jessilyneh",
         "link": "https://speakerdeck.com/jessilyneh"
+      },
+      {
+        "title": "speakerdeck.com/camilacampos",
+        "link": "https://speakerdeck.com/camilacampos"
       }
     ],
     "languages": [
@@ -626,6 +662,38 @@
       {
         "title": "Markdown Live Preview",
         "link": "https://markdownlivepreview.com/"
+      },
+      {
+        "title": "Planet scale",
+        "link": "https://planetscale.com/"
+      },
+      {
+        "title": "Qdrant",
+        "link": "https://qdrant.tech/"
+      },
+      {
+        "title": "Ralph Wiggum: AI Loop Technique",
+        "link": "https://awesomeclaude.ai/ralph-wiggum"
+      },
+      {
+        "title": "Google built in apis",
+        "link": "https://developer.chrome.com/docs/ai/built-in-apis"
+      },
+      {
+        "title": "llms-txt",
+        "link": "https://llmstxt.org/"
+      },
+      {
+        "title": "Winston",
+        "link": "https://www.npmjs.com/package/winston"
+      },
+      {
+        "title": "OpenTelemetry",
+        "link": "https://opentelemetry.io/"
+      },
+      {
+        "title": "Skills for smarter AI agents",
+        "link": "https://agent-skills.techleads.club/"
       }
     ],
     "content": [
@@ -808,7 +876,11 @@
         "title": "Horizon drive",
         "link": "https://www.shopify.com/ca/editions/summer2025/drive"
       }
-    ]
+    ],
+    "tech": {
+      "title": "Mulheres na tecnologia",
+      "link": "https://mulheresnatecnologia.com.br/"
+    }
   },
   "exercises": {
     "challenges": [
