@@ -79,7 +79,7 @@ const switchTheme = () => {
   display: flex;
   column-gap: 20px;
   height: var(--header-height);
-  padding: 20px;
+  padding: 1em 0;
   align-items: center;
   justify-content: space-between;
 }

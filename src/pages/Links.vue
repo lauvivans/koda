@@ -73,10 +73,9 @@ const handleSelectedLink = (item: {
           <a :href="selectedLink.link" target="_blank">Access content</a>
         </div>
         <div v-else>
-          <p class="p-homepage__link__no-selected-content">Click in a card to show content here</p>
-        </div>
-        <div class="p-homepage__link__img-wrapper">
-          <img src="../assets/undraw_friends_xscy.svg" />
+          <p class="p-homepage__link__no-selected-content">
+            Click in a card to show content here
+          </p>
         </div>
       </div>
     </div>
@@ -98,7 +97,7 @@ const handleSelectedLink = (item: {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: var(--code-bg);
-  padding: 1em 4em 1em 1em;
+  padding: 1em 2em 1em 1em;
   height: fit-content;
   z-index: 100;
   flex: 1;
@@ -147,10 +146,15 @@ const handleSelectedLink = (item: {
   flex: 2;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .p-homepage__content__left__img-wrapper {
-  max-width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
 
   @media (max-width: 480px) {
     width: 100%;
@@ -170,7 +174,7 @@ const handleSelectedLink = (item: {
   row-gap: 10px;
   height: 100%;
   overflow-y: auto;
-  padding: 0px 20px;
+  padding: 0px 1em 10em;
 
   @media (max-width: 480px) {
     width: 100%;
@@ -205,10 +209,12 @@ const handleSelectedLink = (item: {
 }
 
 .p-homepage__link {
-  padding: 1.5em 0.5em 0em;
-  flex: 2;
+  padding: 1.5em 1.5em 0 .5em;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  row-gap: 2em;
+  border-radius: 10px;
 }
 
 .p-homepage__link > div {
@@ -216,18 +222,6 @@ const handleSelectedLink = (item: {
   flex-direction: column;
   row-gap: 1em;
   height: 100%;
-}
-
-.p-homepage__link__img-wrapper {
-  display: flex;
-  margin-top: auto;
-  max-height: 50%;
-}
-
-.p-homepage__link__img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 
 .p-homepage__link__no-selected-content {

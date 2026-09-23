@@ -59,8 +59,10 @@
 <style lang="css">
 .p-home {
   display: flex;
+  flex-direction: column;
   column-gap: 1em;
-  padding: 1em;
+  padding: 2em 0;
+  height: 100%;
 
   @media (max-width: 480px) {
     flex-direction: column;
@@ -70,7 +72,7 @@
 .p-home__aside {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  place-items: center;
   row-gap: 1em;
   flex: 1;
 }
@@ -83,9 +85,18 @@
   font-weight: 700;
 }
 
+.p-home__img-wrapper {
+  width: 10%;
+  height: auto;
+
+  @media (max-width: 480px) {
+    width: 40%;
+  }
+}
+
 .p-home__img-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -93,7 +104,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  flex: 4;
+  flex: 7;
+  width: 95%;
+  margin: auto;
+  padding-bottom: 5em;
 }
 
 .p-home__presentation > p {

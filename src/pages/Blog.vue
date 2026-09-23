@@ -24,7 +24,7 @@ import posts from "../posts";
   display: flex;
   flex-direction: column;
   row-gap: 2em;
-  padding: 3em 3em 0;
+  padding: 3em 1em 0;
   width: 100%;
 }
 
