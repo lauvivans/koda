@@ -16,7 +16,6 @@
   column-gap: 30px;
   height: 100%;
   width: 100%;
-  padding: 20px 20px 0px;
 
   @media (max-width: 480px) {
     flex-direction: column;
