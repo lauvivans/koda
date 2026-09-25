@@ -28,13 +28,18 @@ const post = computed(() => posts.find((p) => p.id === postId));
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 85%;
   padding: 3em;
+
+  @media (max-width: 480px) {
+    max-width: 100%;
+  }
 }
 
 .c-blog-post__header {
   display: flex;
   flex-direction: column;
+  place-items: center;
   margin-bottom: 2.5em;
 }
 
