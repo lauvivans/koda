@@ -26,6 +26,7 @@ import posts from "../posts";
   row-gap: 2em;
   padding: 3em 1em 0;
   width: 100%;
+  height: 100%;
 }
 
 .p-blog__links {

@@ -99,6 +99,7 @@ const handleYoutubeOpen = () => {
 .koda-app {
   height: calc(100% - var(--header-height));
   display: flex;
+  flex-direction: column;
   width: 100%;
   position: relative;
 }
